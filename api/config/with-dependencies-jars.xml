@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<assembly xmlns="http://maven.apache.org/plugins/maven-assembly-plugin/assembly/1.1.1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/plugins/maven-assembly-plugin/assembly/1.1.1 http://maven.apache.org/xsd/assembly-1.1.1.xsd">
+	<id>with-dependencies-jars</id>  	
+  	<formats>
+    	<format>zip</format>
+  	</formats>
+  	<includeBaseDirectory>false</includeBaseDirectory>
+  	<dependencySets>
+   		<dependencySet>
+      		<outputDirectory>/</outputDirectory>
+      		<useTransitiveDependencies>false</useTransitiveDependencies>
+      		<includes>
+      		
+      			<!-- UCE Modules -->
+        		<include>de.fhkn.in.uce:uce</include>
+        		<include>de.fhkn.in.uce:core</include>
+        		<include>de.fhkn.in.uce:stun</include>
+        		<include>de.fhkn.in.uce:sip</include>
+        		<include>de.fhkn.in.uce:socketswitch</include>
+        		<include>de.fhkn.in.uce:relaying</include>
+        		<include>de.fhkn.in.uce:holepunching</include>
+        		
+        		<!-- UCE Dependencies -->
+        		<include>net.sourceforge.findbugs:annotations</include>
+        		<include>org.slf4j:slf4j-api</include>
+        		<include>org.slf4j:slf4j-log4j12</include>
+        		<include>log4j:log4j</include>
+        		<include>javax.sip:jain-sip-api</include>
+        		<include>javax.sip:jain-sip-ri</include>
+        		<include>com.sun.jersey.samples:optimistic-concurrency</include>
+        		<include>net.minidev:json-smart</include>
+        		<include>net.minidev:asm</include>
+        		
+      		</includes>
+      		<unpack>false</unpack>
+      		<scope>runtime</scope>
+    	</dependencySet>
+  	</dependencySets>
+</assembly>
